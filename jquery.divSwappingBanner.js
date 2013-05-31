@@ -2,7 +2,9 @@
     $.fn.divSwappingBanner = function(options) {
 
         var defaults = {
-            image_height: "250px"
+            image_height: "250px",
+            highlight_selected: true,
+            default_image_selected: 1
         };
         var options = $.extend(defaults, options);
 
@@ -37,6 +39,7 @@
                     if (currentVisible !== "undefined" && currentVisible !== id[1]) {
                         $("#divSwappingBanner-div-"+currentVisible).fadeOut();
                     }
+                    
                     $("#divSwappingBanner-div-"+id[1]).fadeIn();
                     currentVisible = id[1];
                 });
