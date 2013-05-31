@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DivSwappingBanner Demo</title>    
+        <script src="jquery-1.10.0.min.js" type="text/javascript"></script>
+        <script src="jquery.divSwappingBanner.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="divSwappingBannerStyle.css">
+    </head>
+    <body>
+        <div id='imageContainer'>
+            <img alt='Image 1' src='#' id='divSwappingBanner-image-1' class='divSwappingBannerImage' />
+            <img alt='Image 2' src='#' id='divSwappingBanner-image-2' class='divSwappingBannerImage' />
+            <img alt='Image 3' src='#' id='divSwappingBanner-image-3' class='divSwappingBannerImage' />
+            <img alt='Image 4' src='#' id='divSwappingBanner-image-4' class='divSwappingBannerImage' />
+            <img alt='Image 5' src='#' id='divSwappingBanner-image-5' class='divSwappingBannerImage' />
+        </div>
+
+
+        <div class='divSwappingBannerContentDiv' id='divSwappingBanner-div-1'>
+            <p>Test div 1 content</p>
+        </div>
+
+        <div class='divSwappingBannerContentDiv' id='divSwappingBanner-div-2'>
+            <p>Test div 2 content</p>
+        </div>
+
+        <div class='divSwappingBannerContentDiv' id='divSwappingBanner-div-3'>
+            <p>Test div 3 content</p>
+        </div>
+
+        <div class='divSwappingBannerContentDiv' id='divSwappingBanner-div-4'>
+            <p>Test div 4 content</p>
+        </div>
+
+        <div class='divSwappingBannerContentDiv' id='divSwappingBanner-div-5'>
+            <p>Test div 5 content</p>
+        </div>
+
+        <script>
+            $(document).ready( function() {
+                $().divSwappingBanner({
+                    //image_height:"40px"
+                });
+            });
+        </script>
+    </body>
+</html>
