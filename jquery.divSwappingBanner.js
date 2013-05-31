@@ -132,7 +132,9 @@
 
                 if (parseInt(options['default_image_selected']) !== 0) {
                     if (parseInt(id[1]) === parseInt(options['default_image_selected'])) {
-                        showSelected(id[1]);
+                        if (options["highlight_selected"]) {
+                            showSelected(id[1]);
+                        }
                         $("#divSwappingBanner-div-"+id[1]).fadeIn();
                         currentVisible = id[1];
                     }
@@ -142,8 +144,10 @@
                     if (currentVisible !== "undefined" && currentVisible !== id[1]) {
                         $("#divSwappingBanner-div-"+currentVisible).fadeOut();
                     }
-                    unSelect(currentVisible);
-                    showSelected(id[1]);
+                    if (options["highlight_selected"]) {
+                        unSelect(currentVisible);
+                        showSelected(id[1]);
+                    }
                     $("#divSwappingBanner-div-"+id[1]).fadeIn();
                     currentVisible = id[1];
                 });
