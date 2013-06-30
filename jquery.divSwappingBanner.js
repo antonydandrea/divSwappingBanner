@@ -110,7 +110,7 @@
                 $(this).css('margin-top', options['image_height']);
             }
         });
-
+        
         $('img').each(function(){
             if($(this).attr('id').match(/divSwappingBanner\-image\-([0-9]{1})/)) {
                 numberOfImages = numberOfImages + 1;
@@ -178,19 +178,6 @@
 
             $("#divSwappingBanner-div-"+divNumber).fadeIn();
             currentVisible = divNumber;
-        };
-        
-        $('div').each(function(){
-            if( $(this).attr('id').match(/divSwappingBanner\-div\-[0-9]{1}/) ) {
-                $(this).hide();
-                $(this).css('position', 'absolute');
-                $(this).css('-moz-box-sizing', 'border-box');
-                $(this).css('-webkit-box-sizing', 'border-box');
-                $(this).css('box-sizing', 'border-box');
-                $(this).css('margin', '0 auto');
-                $(this).outerWidth("100%");
-                $(this).css('margin-top', options['image_height']);
-            }
-        });
+        }; 
     };
 })(jQuery);
