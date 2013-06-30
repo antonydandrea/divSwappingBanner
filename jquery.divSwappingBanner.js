@@ -4,7 +4,9 @@
         var defaults = {
             image_height: "250px",
             highlight_selected: true,
-            default_image_selected: 1
+            default_image_selected: 1,
+            auto_scroll_enabled: false,
+            auto_scroll_time: 5
         };
         var options = $.extend(defaults, options);
 
@@ -35,17 +37,38 @@
                 imageContainerHeight = $('#imageContainer').outerHeight();
 
                 $(this).click(function(){
-                    var id = $(this).attr('id').match(/divSwappingBanner\-image\-([0-9]{1})/);
-                    if (currentVisible !== "undefined" && currentVisible !== id[1]) {
-                        $("#divSwappingBanner-div-"+currentVisible).fadeOut();
-                    }
-                    
-                    $("#divSwappingBanner-div-"+id[1]).fadeIn();
-                    currentVisible = id[1];
+                    doSwap(this);
                 });
             }
         });
+        if (options['auto_scroll_enabled'] === true) {
+            var tid = setInterval(function(){
+               doSwap();
+            }, parseInt(options['auto_scroll_time'])*1000);
+        }
+        
+        var doSwap = function(el){
+            if (el) {
+                var id = $(el).attr('id').match(/divSwappingBanner\-image\-([0-9]{1})/);
+                var divNumber = id[1];
+            } else if (currentVisible) {
+                if (currentVisible >= numberOfImages) {
+                    var divNumber = 1;
+                } else {
+                    var divNumber = parseInt(currentVisible) + 1;
+                }
+            } else {
+                var divNumber = 1;
+            }
+            
+            if (currentVisible !== "undefined" && currentVisible !== divNumber) {
+                $("#divSwappingBanner-div-"+currentVisible).fadeOut();
+            }
 
+            $("#divSwappingBanner-div-"+divNumber).fadeIn();
+            currentVisible = divNumber;
+        };
+        
         $('div').each(function(){
             if( $(this).attr('id').match(/divSwappingBanner\-div\-[0-9]{1}/) ) {
                 $(this).hide();
