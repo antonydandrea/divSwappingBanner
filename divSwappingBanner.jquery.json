@@ -1,0 +1,33 @@
+{
+    "name": "divSwappingBanner",
+    "title": "Div Swapping Banner",
+    "description": "jQuery plugin for having a row of images and some div blocks that appear depending on which image is selected. All CSS is handled by the plugin.",
+    "keywords": [
+        "image",
+        "div",
+        "homepage",
+        "images",
+        "select",
+        "gallery",
+        "divs",
+        "ui"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Antony D'Andrea",
+        "url": "antonydandrea.com"
+    },
+    "licenses": [
+    {
+        "type": "MIT",
+        "url": "http://opensource.org/licenses/MIT"
+    }
+    ],
+    "bugs": "https://github.com/antony492/divSwappingBanner/issues",
+    "homepage": "https://github.com/antony492/divSwappingBanner",
+    "docs": "https://github.com/antony492/divSwappingBanner",
+    "download": "https://github.com/antony492/divSwappingBanner",
+    "dependencies": {
+        "jquery": ">=1.8.0"
+    }
+}
