@@ -1,7 +1,7 @@
 {
     "name": "divSwappingBanner",
     "title": "Div Swapping Banner",
-    "description": "jQuery plugin for having a row of images and some div blocks that appear depending on which image is selected. All CSS is handled by the plugin.",
+    "description": "jQuery plugin for having a row of images and some div blocks that appear depending on which image is selected. It can be set to auto scroll through each image. All CSS is handled by the plugin.",
     "keywords": [
         "image",
         "div",
@@ -12,7 +12,7 @@
         "divs",
         "ui"
     ],
-    "version": "1.0.0",
+    "version": "1.1.0",
     "author": {
         "name": "Antony D'Andrea",
         "url": "antonydandrea.com"

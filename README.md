@@ -1,4 +1,5 @@
 divSwappingBanner
+Version 1.1.0
 =================
 jQuery plugin for having a row of images and some div blocks that appear depending on which image is selected. All CSS is handled by the plugin.
 
@@ -13,6 +14,17 @@ It does function with Internet Explorer 6 and 7 but the layout is not as it is i
 of JQuery.
 
 A minified version of JQuery 1.10.0 is included in the package and is used in the demo.
+
+Change Log
+=================
+Version 1.0.0 
+31/05/2013
+First stable version released.
+
+Version 1.1.0
+30/06/2013
+Added auto scroll feature that allows it to select each image one by one automatically.
+Added new options to turn auto scroll on and set the interval time. 
 
 How to use
 =================
@@ -43,7 +55,9 @@ $(document).ready( function() {
         image_height:"40px", //default is 250px
         highlight_selected: false, //default is true
         highlight_colour: ,         //default is #FFFF85
-        default_image_selected: 4 //default is 1
+        default_image_selected: 4, //default is 1
+        auto_scroll_enabled: true //default is false
+        auto_scroll_time: 3, //default is 5
     });
 });
 </script>
@@ -52,6 +66,8 @@ image_height: The height of the banner at the top.
 highlight_selected: highlights the currently selected image with a border.
 highlight_colour: specify the colour of the colour of the border of the selected image.
 default_image_selected: When the page loads, you can have an image pre-selected. This defaults to first image. Set this to 0 if you do not want any image selected.
+auto_scroll_enabled: If this is set to true, it will automatically selects each image one by one on a loop
+auto_scroll_time: Number of seconds before the next image is selected
 
 7) A CSS file is not necessary, but you can add your own borders around the images and the plugin will adapt the size automatically. Also, if you have borders already set, the highlight_selected feature will
 use the style and width you have set.
