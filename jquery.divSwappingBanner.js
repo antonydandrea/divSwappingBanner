@@ -137,10 +137,8 @@
                         if (options["highlight_selected"]) {
                             showSelected(id[1]);
                         }
-                        console.log("here");
                         $("#divSwappingBanner-div-"+id[1]).fadeIn();
                         currentVisible = id[1];
-                        console.log("#divSwappingBanner-div-"+id[1]);
                     }
                 }
 
